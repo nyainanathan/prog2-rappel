@@ -6,7 +6,6 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class Teacher extends Person{
     private String speciality;
 

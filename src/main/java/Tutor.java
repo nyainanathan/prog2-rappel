@@ -6,7 +6,6 @@ import java.time.LocalDate;
 
 @Getter
 @Setter
-@AllArgsConstructor
 public class Tutor extends  Person{
     private String relationshipWithStudent;
 
