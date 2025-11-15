@@ -1,6 +1,7 @@
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -10,7 +11,7 @@ public class Course {
     private String label;
     private int credits;
     private Teacher teacher;
-    private List<Exam> exams;
+    private List<Exam> exams = new ArrayList<>();
 
     public Course(int id, String label, int credits, Teacher teacher) {
         this.id = id;
