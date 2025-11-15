@@ -63,4 +63,10 @@ public class Grade {
         }
         return 0d;
     }
+
+    public void showGradeLogs(){
+        for(GradeLog grade : grades){
+            System.out.println(grade.getDate() + " : "  + grade.getValue());
+        }
+    }
 }
