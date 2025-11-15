@@ -15,6 +15,8 @@ class GradeTest {
     private Teacher teacher1 = new Teacher(1, "Teacher", "Test", LocalDate.of(1990, 02, 12), "hei.mpampianatra@gmail.com", "032 78 910 11","Backend");
     private Course course1 = new Course(1, "PROG2", 5, teacher1);
     private Exam exam1 = new Exam(1, "Exam de passage", course1, Instant.parse("2025-11-01T13:26:01.00Z"), 3);
+    private Exam exam2 = new Exam(2, "Random exam" , course1, Instant.parse("2025-09-12T10:00:00.00Z"), 5);
+
 
     @BeforeEach
     public void setUp(){
@@ -38,5 +40,10 @@ class GradeTest {
         assertEquals(13, gradeUtils.getExamGrades(exam1, student1, Instant.parse("2025-11-15T13:26:01.00Z")));
         assertEquals(9, gradeUtils.getExamGrades(exam1, student1, Instant.parse("2025-11-10T13:26:01.00Z")));
         assertEquals(18 , gradeUtils.getExamGrades(exam1, student1, Instant.parse("2025-11-08T13:26:01.00Z")));
+    }
+
+    @Test
+    void show_grades_for_particular_course_at_given_instant(){
+
     }
 }
