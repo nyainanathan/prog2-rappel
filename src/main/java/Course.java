@@ -26,4 +26,8 @@ public class Course {
         this.teacher = teacher;
         this.exams = exams;
     }
+
+    public void addExam(Exam exam){
+        this.exams.add(exam);
+    }
 }
